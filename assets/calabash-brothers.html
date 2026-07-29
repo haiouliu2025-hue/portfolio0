@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wang Xiaolu × Shanghai Animation Film Studio — integrated IP campaign case study by Hai’ou Liu.">
+  <title>Wang Xiaolu × Shanghai Animation Film Studio — Hai’ou Liu</title>
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #686868;
+      --line: #d9d9d9;
+      --paper: #f7f6f2;
+      --accent: #9f322c;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+    }
+
+    .site-header,
+    main,
+    .site-footer {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    main {
+      padding: 70px 0 100px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 72px;
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin-bottom: 48px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 7vw, 6.8rem);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.96;
+    }
+
+    h2 {
+      max-width: 800px;
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4.6vw, 4.5rem);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 72px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-meta dt {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-meta dd {
+      margin: 0;
+    }
+
+    .project-index {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin: 30px 0 110px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .project-image {
+      display: block;
+      width: 1200px;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 64px;
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-copy {
+      max-width: 760px;
+      font-size: 1.08rem;
+    }
+
+    .decisions {
+      display: grid;
+      gap: 0;
+      margin-top: 48px;
+    }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .decision-number {
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      margin: 48px 0 28px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .metric {
+      min-height: 170px;
+      padding: 24px;
+      background: var(--paper);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px 0 50px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 760px) {
+      .site-header,
+      .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .project-meta,
+      .section {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        gap: 18px;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-nav {
+        gap: 16px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Hai’ou Liu</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="mailto:haiou.lau@outlook.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <a class="back-link" href="index.html#work">← All work</a>
+
+    <article>
+      <header>
+        <p class="eyebrow">Wang Xiaolu × Shanghai Animation Film Studio</p>
+        <h1>A cultural classic, reimagined for the shopping moment.</h1>
+
+        <dl class="project-meta">
+          <div>
+            <dt>Client</dt>
+            <dd>Wang Xiaolu × Shanghai Animation Film Studio</dd>
+          </div>
+          <div>
+            <dt>Role</dt>
+            <dd>Design Manager / Creative Strategy &amp; Visual Direction</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>IP integration, campaign system, packaging, e-commerce &amp; social</dd>
+          </div>
+        </dl>
+
+        <div class="case-cover"><img class="project-image" src="assets/calabash-campaign-11.jpg" alt="Campaign hero visual"> </div> </article>
+
+        <div class="project-index">
+          <span>01 — Case study</span>	
+          <span>2022 · Integrated IP campaign</span>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="overview-title">
+        <p class="section-label">Overview</p>
+        <div class="section-copy">
+          <h2 id="overview-title">Make the collaboration commercially meaningful.</h2>
+          <p>I led the creative strategy and visual integration for a licensed-IP campaign that brought Wang Xiaolu’s flexible 3D identity together with the traditional Calabash Brothers system. The work translated customer insight, motion and promotional clarity into a connected launch across packaging, e-commerce and social content.</p>
+        </div>
+      </section>
+
+
+
+      <section class="section" aria-labelledby="challenge-title">
+        <p class="section-label">The challenge</p>
+        <div class="section-copy">
+          <h2 id="challenge-title">Two recognisable worlds with different visual rules.</h2>
+          <p>Campaign performance was already mature and difficult to improve. The brands had conflicting visual languages, while licensing and production imposed clear constraints. The challenge was not simply to place two characters together, but to create one compelling commercial world without compromising either identity.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="insight-title">
+        <p class="section-label">Audience insight</p>
+        <div class="section-copy">
+          <h2 id="insight-title">Use nostalgia to open the door, then create a reason to buy.</h2>
+          <p>The campaign needed to speak to audiences who remembered the original animation as well as younger urban shoppers seeking a contemporary cultural experience. Customers valued product quality yet remained price-sensitive, making the promotional proposition as important as the IP story.</p>
+<div class="case-cover" style=“width:640px”><img class="project-image" src="assets/calabash-results-11-2.jpg" alt="Campaign hero visual"> </div> 
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="decisions-title">
+        <p class="section-label">Strategic decisions</p>
+        <div class="section-copy">
+          <h2 id="decisions-title">Three decisions shaped the system.</h2>
+
+          <div class="decisions">
+            <section class="decision">
+              <span class="decision-number">01</span>
+              <div>
+                <h3>Create a shared visual atmosphere</h3>
+                <p>Lighting, materials and rendering language were aligned to make the two character systems feel naturally co-present, without changing either character’s core identity.</p>
+              </div>
+            </section>
+
+            <section class="decision">
+              <span class="decision-number">02</span>
+              <div>
+                <h3>Use motion to increase attention</h3>
+                <p>Previous campaign learning informed the primary visual assets, with movement used to build attention and energy at high-traffic campaign moments.</p>
+              </div>
+
+            </section>
+
+            <section class="decision">
+              <span class="decision-number">03</span>
+              <div>
+                <h3>Make promotional value visible</h3>
+                <p>Discounts and final prices were made immediate within the hierarchy, reducing purchase hesitation while keeping the IP experience intact.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="execution-title">
+        <p class="section-label">Selected execution</p>
+        <div class="section-copy">
+          <h2 id="execution-title">One idea across the whole journey.</h2>
+          <p>The system was adapted across key visual, motion and social content, product-detail pages, packaging, five collaborative products and three gift sets. Rather than presenting every deliverable, the selected frames demonstrate how the strategic idea travelled across touchpoints.</p>
+
+            <div class="case-cover" style=“width:640px”><img class="project-image" src="assets/brand-system-05.jpg" alt="Campaign hero visual"> </div> 
+
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="impact-title">
+        <p class="section-label">Impact</p>
+        <div class="section-copy">
+          <h2 id="impact-title">Creative lift with commercial proof.</h2>
+
+          <div class="metrics">
+            <div class="metric">
+              <strong>34.8%</strong>
+              <span>Click-through rate</span>
+            </div>
+            <div class="metric">
+              <strong>4%</strong>
+              <span>Guiding conversion</span>
+            </div>
+            <div class="metric">
+              <strong>&lt;50%</strong>
+              <span>Product-page bounce rate</span>
+            </div>
+            <div class="metric">
+              <strong>1×</strong>
+              <span>Tiger Roar Silver Awards</span>
+            </div>
+          </div>
+
+          <p>The campaign met its New Year sales target. Here, “guiding conversion” refers to the rate at which the page experience moved visitors toward a purchase action.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="reflection-title">
+        <p class="section-label">Reflection</p>
+        <div class="section-copy">
+          <h2 id="reflection-title">Scale needs a stronger operating model.</h2>
+          <p>The campaign proved that a well-integrated IP system can create both cultural attention and commercial clarity. It also exposed the need for a stronger SOP when high-volume festival work needs to move across many teams and channels.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Hai’ou Liu</span>
+    <a href="design-system.html">Next project: Design system →</a>
+  </footer>
+</body>
+</html>
